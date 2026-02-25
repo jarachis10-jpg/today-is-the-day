@@ -54,6 +54,7 @@ body {
     margin: 0 auto;
     transform: rotate(-45deg);
     margin-top: 40px;
+    z-index: 1;
 }
 
 .corazon:before,
@@ -64,6 +65,7 @@ body {
     background: red;
     border-radius: 50%;
     position: absolute;
+    z-index: 1; /* corazón detrás */
 }
 
 .corazon:before {
@@ -82,6 +84,7 @@ body {
     width: 100%;
     top: 50%;
     transform: translateY(-50%) rotate(45deg);
+    z-index: 2; /* teclas encima del corazón */
 }
 
 .tecla {
@@ -94,6 +97,8 @@ body {
     cursor: pointer;
     box-shadow: 0 6px 0 #ccc;
     transition: 0.1s;
+    position: relative;
+    z-index: 3; /* máxima prioridad */
 }
 
 .tecla:active {
